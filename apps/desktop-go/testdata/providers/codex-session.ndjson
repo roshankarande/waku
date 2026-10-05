@@ -1,0 +1,13 @@
+{"id":1,"result":{"thread":{"id":"thread-1","turns":[]}}}
+{"method":"turn/started","params":{"turn":{"id":"turn-1"}}}
+{"method":"item/started","params":{"item":{"id":"search-1","type":"webSearch","query":"Waku","results":[{"ref_id":"turn1search0","url":"https://example.test/waku"}]}}}
+{"method":"item/agentMessage/delta","params":{"delta":"Result\ue200ci"}}
+{"method":"item/agentMessage/delta","params":{"delta":"te\ue202turn1search0\ue201 done"}}
+{"method":"item/reasoning/summaryTextDelta","params":{"itemId":"reason-1","summaryIndex":0,"delta":"First"}}
+{"method":"item/reasoning/summaryTextDelta","params":{"itemId":"reason-1","summaryIndex":1,"delta":"Second"}}
+{"id":9007199254740993,"method":"item/commandExecution/requestApproval","params":{"command":"go test ./..."}}
+{"id":"question-id","method":"item/tool/requestUserInput","params":{"questions":[{"id":"scope","header":"Scope","question":"Which scope?","options":[{"label":"Focused","description":"Provider package"}]}]}}
+{"method":"thread/tokenUsage/updated","params":{"tokenUsage":{"last":{"totalTokens":9007199254740993},"modelContextWindow":18446744073709551615}}}
+{"method":"thread/goal/updated","params":{"threadId":"thread-1","goal":{"objective":"Finish migration","status":"active","tokenBudget":9223372036854775807}}}
+{"method":"item/completed","params":{"item":{"id":"tool-1","type":"mcpToolCall","server":"filesystem","tool":"read_file","arguments":{"path":"src/main.go","windowId":18446744073709551615},"result":{"content":"ok"},"status":"completed"}}}
+{"method":"turn/completed","params":{"turn":{"id":"turn-1","status":"completed"}}}

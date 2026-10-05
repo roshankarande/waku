@@ -1,0 +1,9 @@
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"agent_thought_chunk","content":{"type":"text","text":"thinking"}}}}
+{"jsonrpc":"2.0","method":"_x.private/progress","params":{"secret":"must-not-surface"}}
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"tool_call","toolCallId":"tool-1","title":"Read fixture","kind":"read","status":"pending","rawInput":{"path":"fixture.txt"}}}}
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"tool_call_update","toolCallId":"tool-1","status":"completed","content":[{"type":"content","content":{"type":"text","text":"fixture output"}}]}}}
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"agent_message_chunk","content":{"type":"text","text":"done"}}}}
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"usage_update","used":9007199254740993,"size":18446744073709551615}}}
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"session_info_update","title":"Fixture title"}}}
+{"jsonrpc":"2.0","method":"session/update","params":{"sessionId":"acp-fixture","update":{"sessionUpdate":"available_commands_update","availableCommands":[{"name":"review","description":"Review changes"}]}}}
+{"jsonrpc":"2.0","id":11,"result":{"stopReason":"end_turn"}}

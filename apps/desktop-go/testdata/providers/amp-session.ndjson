@@ -1,0 +1,4 @@
+{"type":"system","subtype":"init","session_id":"amp-thread"}
+{"type":"assistant","message":{"content":[{"type":"thinking","thinking":"checking"},{"type":"tool_use","id":"tool-1","name":"Bash","input":{"cmd":"printf ok"}}],"stop_reason":"tool_use"}}
+{"type":"user","message":{"content":[{"type":"tool_result","tool_use_id":"tool-1","content":"ok","is_error":false}]}}
+{"type":"assistant","message":{"content":[{"type":"text","text":"done"}],"stop_reason":"end_turn"}}

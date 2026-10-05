@@ -1,0 +1,6 @@
+{"type":"stream_event","event":{"type":"message_start","message":{"role":"assistant"}}}
+{"type":"stream_event","event":{"type":"content_block_delta","delta":{"type":"thinking_delta","thinking":"checking"}}}
+{"type":"stream_event","event":{"type":"content_block_delta","delta":{"type":"text_delta","text":"running"}}}
+{"type":"assistant","message":{"content":[{"type":"text","text":"running"},{"type":"tool_use","id":"tool-1","name":"Bash","input":{"command":"printf ok"}}],"usage":{"input_tokens":5,"cache_read_input_tokens":2}}}
+{"type":"user","message":{"content":[{"type":"tool_result","tool_use_id":"tool-1","content":"ok","is_error":false}]}}
+{"type":"result","is_error":false,"stop_reason":"end_turn"}

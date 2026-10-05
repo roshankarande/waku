@@ -1,0 +1,6 @@
+{"type":"agent_start"}
+{"type":"message_update","assistantMessageEvent":{"type":"thinking_delta","delta":"checking"}}
+{"type":"tool_execution_start","toolCallId":"tool-1","toolName":"bash","args":{"command":"printf ok"}}
+{"type":"tool_execution_end","toolCallId":"tool-1","toolName":"bash","result":"ok","isError":false}
+{"type":"message_update","assistantMessageEvent":{"type":"text_delta","delta":"done"}}
+{"type":"agent_settled"}

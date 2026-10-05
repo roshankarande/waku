@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "fixture": "generated://waku-safe-fixture-v1",
+  "workingCopy": "${TEST_TMPDIR}/waku-data-copy",
+  "dataLockProof": "second Rust or Go daemon must refuse the already locked copied data directory before migration begins",
+  "steps": [
+    {"name":"copy immutable fixture","command":"validation.ExecuteUpgradePlan --generated-fixture --destination ${TEST_TMPDIR}/waku-data-copy","assertions":["source digest unchanged","copy digest matches source"],"destructive":false},
+    {"name":"prove exclusive writer lock","command":"daemon-lock-probe --data ${TEST_TMPDIR}/waku-data-copy --expect-second-writer-refused","assertions":["one writer admitted","second Rust or Go writer refused"],"destructive":false},
+    {"name":"upgrade with Go daemon","command":"go-daemon-fixture --data ${TEST_TMPDIR}/waku-data-copy --migrate --verify","assertions":["journal complete","sessions drafts blobs and provider cursors preserved","remote paths unchanged"],"destructive":false},
+    {"name":"exercise upgraded data","command":"cross-client-fixture --data ${TEST_TMPDIR}/waku-data-copy --read-write-reopen","assertions":["Rust Go web and mobile fixtures agree","changed-row writes only","reopen succeeds"],"destructive":false},
+    {"name":"rollback staged application","command":"release-swap-fixture --prefix ${TEST_TMPDIR}/install --fail-before-window --expect-restore","assertions":["previous prefix restored","old app opens copied data or reports an explicit schema incompatibility","no data loss"],"destructive":false},
+    {"name":"failed migration recovery","command":"go-daemon-fixture --data ${TEST_TMPDIR}/waku-data-copy --inject-migration-failure --recover","assertions":["transaction rolled back","journal consistent","fixture remains reopenable"],"destructive":false}
+  ]
+}

@@ -1,0 +1,1 @@
+{"type":"turn.ended","turnId":2,"reason":"failed","error":{"code":"provider.api_error","message":"402 membership inactive","retryable":false}}

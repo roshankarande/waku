@@ -1,0 +1,6 @@
+[
+  {"id":"long-transcript","fixtureSha256":"4f76c2ce237cbaa7bfeba8d944db8cc58cc1658d7c4b6483aa125a21255a2180","bytes":652972,"transcriptRows":10000},
+  {"id":"fast-reasoning","fixtureSha256":"146d22951537176d3c7df7a1431a7904137a324c62c8b1a71c0800c401a64f78","bytes":4194346,"reasoningBytes":2097152,"streamBytes":2097152,"streamIntervalMs":5},
+  {"id":"large-diff","fixtureSha256":"392bda7fe4f761d2f0848924eb15dcd0f589fd4862a6dc5b7d6ddc71b439bc85","bytes":4891685,"diffLines":100000},
+  {"id":"terminal-plus-stream","fixtureSha256":"1978b7783595578b0faeba25b45b9508c0dc4e4fc337dcec5d48713255165619","bytes":10485808,"terminalBytes":8388608,"streamBytes":2097152,"streamIntervalMs":10}
+]

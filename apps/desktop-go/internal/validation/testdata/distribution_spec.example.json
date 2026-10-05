@@ -1,0 +1,14 @@
+{
+  "applicationExecutables": ["bin/waku-go", "bin/waku-go-daemon"],
+  "applicationRoles": {
+    "bin/waku-go": "desktop",
+    "bin/waku-go-daemon": "daemon"
+  },
+  "targetPlatform": "linux",
+  "reviewedSbomPath": "share/sbom.json",
+  "reviewedSbomSha256": "REVIEWED_SHA256",
+  "retainedAssets": [],
+  "requiredPaths": ["share/applications/sh.waku.desktop", "share/icons/hicolor/256x256/apps/sh.waku.png"],
+  "licensePaths": ["share/licenses/waku/LICENSE"],
+  "noticePaths": ["share/notices/waku/NOTICE"]
+}

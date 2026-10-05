@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "applicationExecutables": [
+    "bin/waku-go",
+    "bin/waku-go-daemon"
+  ],
+  "applicationMetadata": [
+    {"path":"bin/waku-go","sha256":"GENERATED","goVersion":"GENERATED","modulePath":"GENERATED","cgoEnabled":"0","role":"desktop","roleProbeSha256":"GENERATED"},
+    {"path":"bin/waku-go-daemon","sha256":"GENERATED","goVersion":"GENERATED","modulePath":"GENERATED","cgoEnabled":"0","role":"daemon","roleProbeSha256":"GENERATED"}
+  ],
+  "retainedAssets": [],
+  "requiredPaths": [
+    "share/applications/sh.waku.desktop",
+    "share/icons/hicolor/256x256/apps/sh.waku.png"
+  ],
+  "licensePaths": ["share/licenses/waku/LICENSE"],
+  "noticePaths": ["share/notices/waku/NOTICE"],
+  "licenseSha256": {"share/licenses/waku/LICENSE":"GENERATED"},
+  "noticeSha256": {"share/notices/waku/NOTICE":"GENERATED"},
+  "requiredSha256": {
+    "share/applications/sh.waku.desktop":"GENERATED",
+    "share/icons/hicolor/256x256/apps/sh.waku.png":"GENERATED"
+  },
+  "noApplicationOwnedRustRuntime": true,
+  "noApplicationOwnedJsRuntime": true,
+  "targetPlatform": "linux",
+  "reviewedSbomPath": "share/sbom.json",
+  "reviewedSbomSha256": "REVIEWED_SHA256"
+}
